@@ -9,19 +9,96 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-  /**/
-
+  .main-win-cc .form-c .arrow-csll
+    left: 47px
+  .menu-exmpl-c
+    padding-right: 0px
+    padding-left: 0px
+  .menu-sec .m-lvl1 li
+    font-size: 12px!important
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-  /**/
-
+  .main-win-cc .form-c .arrow-csll
+    display: none
+  .main-win-cc .h1
+    font-size: 26px
+  .menu-exmpl-c
+    padding: 30px 0px
+  .example-sec .ex-c
+    margin-bottom: 30px
+    &:nth-child(2)
+      border-right: 1px rgba(255,255,255,.3) solid
+  .menu-sec
+    display: none
+  .mobile-m
+    display: block
+  .menu-exmpl-c .h4
+    margin: 15px 0px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-  /**/
+  .main-win-cc .form-c
+    flex-direction: column
+    align-items: center
+  .main-win-cc .form-c .group-c
+    align-items: center
+    margin-right: 0px!important
+    &:first-child
+      margin-bottom: 10px
+  .main-win-cc .form-c .group-c input
+    width: 100%
+    padding-left: 10px
+  .browser-c
+    .browser-h
+      text-align: center
+    .browser-bd
+      text-align: center
+      width: 100%
+
+  .menu-exmpl-c .h4
+    margin: 30px 0px
+  .example-sec .ex-c .ex-i
+    height: auto
+    min-height: 95px
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+  .example-sec a
+    max-width: 220px
+  .example-sec .ex-c
+    border: none!important
+    //border-bottom: 1px solid rgba(255,255,255,.3)!important
+    position: relative
+    margin-bottom: 0px
+    padding: 15px 0px
+    &:last-child
+      &:after
+        display: none
+    &:after
+      content: ''
+      position: absolute
+      border-bottom: 1px solid rgba(255,255,255,.3)
+      bottom: 0px
+      left: 50%
+      transform: translate(-50%, 0)
+      width: 150px
+      height: 1px
+  .dev-main-win-sec
+    height: auto
+    max-height: 900px
+    padding: 30px 0px
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 576px)
-  /**/
-
+  .main-win-cc .h1
+    font-size: 16px
+  .main-win-cc .h3
+    font-size: 16px
+  .main-win-cc .discr
+    font-size: 14px
+  .dev-main-win-sec
+    background-position: -318px
+  .main-win-cc .form-c .group-c
+    width: 100%
 /*==========  Mobile First  ==========*/
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 576px)

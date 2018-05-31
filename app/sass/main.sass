@@ -148,6 +148,485 @@ body
 
 
 /*Project start*/
+
+button
+	border: none
+
+.btn-accent
+	background: $accent2
+	text-align: right
+	padding: 17px 45px
+	border-radius: 115px
+	color: #FFFFFF
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	font-size: 12px
+	font-weight: 700
+	cursor: pointer
+	text-transform: uppercase
+	font-family: $default-font2
+	transition: all .3s ease
+	&.btn-accent-q
+		border-radius: 3px
+		font-size: 12px
+		text-transform: none
+		padding: 7px 45px
+	.svg-c
+		margin-left: 12px
+	&:hover, &:focus
+		background: $dark
+		color: #FFFFFF
+
+.dev-main-win-sec
+	height: 487px
+	max-height: 100vh
+	background-position: center
+	background-repeat: no-repeat
+	background-color: $dark
+	position: relative
+	background-size: cover
+	&:after
+		content: ''
+		position: absolute
+		top: 0px
+		left: 0px
+		right: 0px
+		bottom: 0px
+		background: $dark
+		z-index: 1
+		opacity: 0.75
+	.set-order-r
+		.btn-accent
+			margin-top: 17px
+.accent-txt
+	color: $accent
+.main-win-cc
+	display: flex
+	align-items: center
+	justify-content: center
+	text-align: center
+	position: relative
+	z-index: 5
+	height: 100%
+	.h1
+		font-family: $default-font2
+		font-size: 36px
+		font-weight: 700
+		text-align: center
+		color: #FFFFFF
+		text-transform: uppercase
+		line-height: 1.3
+	.h3
+		color: #FFFFFF
+		font-size: 24px
+		font-weight: 700
+		font-family: $default-font2
+	.discr
+		color: #FFFFFF
+		text-align: center
+		max-width: 632px
+		margin: auto
+		font-size: 16px
+		margin-bottom: 21px
+	.form-c
+		display: flex
+		align-items: flex-end
+		justify-content: center
+		position: relative
+		.arrow-csll
+			position: absolute
+			left: 148px
+			top: -91px
+		.group-c
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			&:first-child
+				margin-right: 8px
+			label
+				font-size: 12px
+				color: #f7f7f7
+				font-weight: 300
+				font-family: $default-font2
+				display: flex
+				align-items: center
+				.svg-c
+					margin-right: 11px
+					display: flex
+					align-items: center
+					justify-content: center
+				.txt
+					font-weight: 300
+					font-family: $default-font2
+			input
+				background: transparent
+				border-radius: 3px
+				border: solid 1px #FFFFFF
+				height: 42px
+				width: 329px
+				max-width: 100%
+				line-height: 42px
+				font-size: 18px
+				color: #FFFFFF
+				padding-left: 30px
+				font-weight: 700
+				font-family: $default-font2
+.proofs-sec
+	padding: 75px 0px
+	.title-b
+		text-align: center
+	.h2
+		text-align: center
+		margin: 0px
+		font-size: 36px
+		font-weight: 500
+		margin-bottom: 15px
+	.discr
+		margin-bottom: 0px
+		background: $dark
+		color: #FFFFFF
+		text-transform: uppercase
+		display: inline-block
+		padding: 10px 15px
+		font-size: 14px
+
+.tasks-r
+	margin-top: 45px
+	.tasks-c
+		margin-bottom: 30px
+		.tasks-i
+			.svg-c
+				display: flex
+				justify-content: center
+				align-items: center
+			.discr-t
+				font-size: 18px
+				font-weight: 300
+				color: $dark
+				text-align: center
+				margin-top: 15px
+
+.btn-grey
+	background: #d4d4d4
+	font-size: 14px
+	color: $dark
+	padding: 15px
+	width: 100%
+	border-radius: 3px
+	transition: all .3s ease
+	&:hover, &:focus
+		background: $accent
+		color: #FFFFFF
+.triggers-sec
+	background: #f4f4f4
+	padding: 45px 0px
+	.triggers-cc
+		.triggers-r
+			margin: 0 -5px
+			margin-top: 24px
+			.triggers-c
+				padding: 0 5px
+				margin-bottom: 10px
+	.h2
+		font-size: 48px
+		text-align: center
+		margin: 0px
+
+.stand-sec
+	padding-top: 30px
+	padding-bottom: 45px
+	.num
+		color: #FFFFFF
+		background: $accent2
+		border-radius: 100px
+		width: 37px
+		height: 37px
+		display: flex
+		align-items: center
+		justify-content: center
+		font-size: 21px
+		margin-right: 15px
+	.h2
+		display: flex
+		align-items: center
+		margin: 0px
+		margin-bottom: 30px
+
+.browser-c
+	position: relative
+	img
+		max-width: 100%
+	.browser-bd
+		position: absolute
+		top: 33px
+
+.menu-exmpl-c
+	padding: 30px 50px
+	p
+		font-size: 14px
+		line-height: 1.79
+	.h4
+		margin: 45px 0px
+		font-size: 18px
+		font-weight: 700
+
+.btn-m
+	background: #FFFFFF
+	position: relative
+	color: transparent
+	&:not(.not-subm):before
+		content: ''
+		color: #0083cc
+		width: 10px
+		height: 2px
+		background: #0083cc
+		position: absolute
+		top: 8px
+		left: 50%
+		transform: translate(-50%, 0)
+	&:not(.active):not(.not-subm):after
+		content: ''
+		color: #0083cc
+		width: 2px
+		height: 10px
+		background: #0083cc
+		position: absolute
+		top: 4px
+		left: 50%
+		transform: translate(-50%, 0)
+	&.not-subm:after
+		content: ''
+		color: #0083cc
+		width: 10px
+		height: 2px
+		background: $dark
+		position: absolute
+		top: 9px
+		left: 50%
+		transform: translate(-50%, 0)
+		border-radius: 100px
+
+.menu-sec
+	.m-lvl1
+		display: flex
+		align-items: center
+		list-style: none
+		padding: 0px
+		margin: 0px
+		&>li
+			color: #FFFFFF
+			background: $dark
+			font-size: 14px
+			width: 110px
+			text-align: center
+			padding: 8px 0px
+			margin-right: 4px
+			cursor: pointer
+			transition: all .3s ease
+			border-radius: 3px
+			position: relative
+			&:last-child
+				margin-right: 0px
+			.m-lvl2
+				display: none
+				align-items: center
+				list-style: none
+				flex-direction: column
+				padding: 0px
+				margin: 0px
+				top: 22px
+				position: absolute
+				padding-top: 14px
+				&>li
+					color: #FFFFFF
+					background: #626262
+					font-size: 14px
+					width: 110px
+					text-align: center
+					padding: 8px 0px
+					margin-right: 4px
+					cursor: pointer
+					transition: all .3s ease
+					border-radius: 3px
+					position: relative
+					margin-bottom: 4px
+					&:hover
+						background: $accent2
+						.m-lvl3
+							display: block!important
+							animation: fadeEffect .3s ease
+				.m-lvl3
+					display: none
+					align-items: center
+					list-style: none
+					flex-direction: column
+					padding: 0px
+					margin: 0px
+					top: 0px
+					left: 110px
+					position: absolute
+					display: none
+					padding-left: 4px
+					li
+						color: #FFFFFF
+						background: #626262
+						font-size: 14px
+						width: 110px
+						text-align: center
+						padding: 8px 0px
+						margin-right: 4px
+						cursor: pointer
+						transition: all .3s ease
+						border-radius: 3px
+						position: relative
+						margin-bottom: 4px
+						&:hover
+							background: $accent2
+			&:hover
+				background: $accent2
+				.m-lvl2
+					display: block!important
+					animation: fadeEffect .3s ease
+
+.mobile-m
+	display: none
+	ul
+		margin: 0px
+		list-style: none
+		padding-left: 30px
+		li
+			position: relative
+			color: $dark
+			font-weight: 700
+			margin-top: 5px
+	.m-lvl3
+		display: none
+	.m-lvl2
+		display: none
+	&>ul
+		padding-left: 0px
+.example-sec
+	padding: 15px 0px
+	background: $dark
+	position: relative
+	&:before
+		content: ''
+		width: 0
+		height: 0
+		top: 0px
+		left: 50%
+		transform: translate(-50%, 0px)
+		position: absolute
+		border-style: solid
+		border-width: 22px 35px 0 35px
+		border-color: #ffffff transparent transparent transparent
+	.h2
+		color: #ffffff
+		font-size: 24px
+		margin: 0px
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 100%
+	.ex-c
+		border-left: 1px rgba(#FFFFFF, 0.3) solid
+		.ex-i
+			height: 95px
+		&:last-child
+			border-right: 1px rgba(#FFFFFF, 0.3) solid
+	.img-c
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 50px
+		img
+			max-width: 100%
+	a
+		text-decoration: underline
+		color: #FFFFFF
+		font-size: 11px
+		line-height: 1.75
+		font-weight: 100
+		text-align: center
+		display: inline-block
+		margin-top: 5px
+		width: 100%
+
+.type-explore
+	padding: 90px 0px
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	.h2
+		color: #FFFFFF
+		text-align: center
+		margin: 0px
+	.btn-accent
+		border-radius: 3px
+		margin-top: 15px
+
+.create-site
+	margin-top: 45px
+	.d-flex
+		display: flex
+		align-items: center
+		height: 400px
+		padding: 31px
+		border: solid 1px rgba(0, 0, 0, 0.13)
+		.h2
+			font-size: 36px
+		p
+			line-height: 1.75
+	.prev
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+
+.steps-dev-r
+	margin-top: 30px
+	.steps-dev-c
+		.steps-dev-i
+			border: solid 1px rgba(0, 0, 0, 0.13)
+			display: flex
+			align-items: center
+			min-height: 133px
+			overflow: hidden
+			position: relative
+	.steps-ico
+		max-width: 123px
+		min-width: 123px
+		height: 100%
+		&:after
+			content: ''
+			position: absolute
+			background: $dark
+			width: 246px
+			height: 246px
+			left: -123px
+			top: 50%
+			transform: translate(0, -50%)
+			border-radius: 1000px
+			z-index: 0
+		.num-t
+			color: #FFFFFF
+			font-size: 27px
+			font-weight: 100
+			padding-left: 14px
+			position: relative
+			z-index: 1
+		.svg-c
+			padding-left: 30px
+			position: relative
+			z-index: 1
+	.h3
+		margin: 0px
+		font-size: 24px
+		font-weight: 900
+		text-align: center
+#my-footer
+	height: 500px
+
 /*Project end*/
 
 
