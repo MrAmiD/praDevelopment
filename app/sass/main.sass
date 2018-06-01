@@ -58,23 +58,33 @@ body
 		opacity: 1
 @keyframes fade-translateLeft
 	0%
-		transform: translate3d(-50px, -50%, 0px)
+		transform: translate3d(-50px, 0, 0px)
 		opacity: 0
 	50%
-		transform: translate3d(-50px, -50%, 0px)
+		transform: translate3d(-50px, 0, 0px)
 		opacity: 0
 	100%
-		transform: translate3d(0px, -50%, 0px)
+		transform: translate3d(0px, 0, 0px)
 		opacity: 1
 @keyframes fade-translateRight
 	0%
-		transform: translate3d(50px, -50%, 0px)
+		transform: translate3d(50px, 0, 0px)
 		opacity: 0
 	50%
-		transform: translate3d(50px, -50%, 0px)
+		transform: translate3d(50px, 0%, 0px)
 		opacity: 0
 	100%
-		transform: translate3d(0px, -50%, 0px)
+		transform: translate3d(0px, 0%, 0px)
+		opacity: 1
+@keyframes fade-translateRightTop
+	0%
+		transform: translate3d(50px, 50px, 0px)
+		opacity: 0
+	50%
+		transform: translate3d(50px, 50px, 0px)
+		opacity: 0
+	100%
+		transform: translate3d(0px, 0%, 0px)
 		opacity: 1
 @keyframes ani-mouse
 	0%
@@ -167,11 +177,20 @@ button
 	text-transform: uppercase
 	font-family: $default-font2
 	transition: all .3s ease
+	text-align: center
 	&.btn-accent-q
 		border-radius: 3px
 		font-size: 12px
 		text-transform: none
 		padding: 7px 45px
+	&.white-btn
+		color: $dark
+		background: #FFFFFF
+		border-radius: 3px
+		text-align: center
+		&:hover, &:focus
+			background: darken(#FFFFFF, 10)
+			color: $dark
 	.svg-c
 		margin-left: 12px
 	&:hover, &:focus
@@ -204,7 +223,7 @@ button
 .main-win-cc
 	display: flex
 	align-items: center
-	justify-content: center
+	//justify-content: center
 	text-align: center
 	position: relative
 	z-index: 5
@@ -238,6 +257,7 @@ button
 			position: absolute
 			left: 148px
 			top: -91px
+			pointer-events: none
 		.group-c
 			display: flex
 			flex-direction: column
@@ -293,8 +313,19 @@ button
 
 .tasks-r
 	margin-top: 45px
+	&.animate
+		.tasks-c
+			&:nth-of-type(1)
+				animation: fade-translateLeft 1.1s ease
+			&:nth-of-type(2)
+				animation: fade-translate 1.1s ease
+			&:nth-of-type(3)
+				animation: fade-translate 1.1s ease
+			&:nth-of-type(4)
+				animation: fade-translateRight 1.1s ease
 	.tasks-c
 		margin-bottom: 30px
+
 		.tasks-i
 			.svg-c
 				display: flex
@@ -355,11 +386,17 @@ button
 
 .browser-c
 	position: relative
+	&.animate
+		.browser-h
+			animation: fade-translate 1.1s ease
+		.browser-bd
+			animation: fade-translateLeft 1.1s ease
 	img
 		max-width: 100%
 	.browser-bd
 		position: absolute
 		top: 33px
+		max-width: 100%
 
 .menu-exmpl-c
 	padding: 30px 50px
@@ -414,6 +451,25 @@ button
 		list-style: none
 		padding: 0px
 		margin: 0px
+		&.animate
+			&>li
+				&:nth-of-type(1)
+					animation: fade-translateLeft 0.3s ease
+				&:nth-of-type(2)
+					animation: fade-translateLeft 0.6s ease
+				&:nth-of-type(3)
+					animation: fade-translateLeft 0.9s ease
+				&:nth-of-type(4)
+					animation: fade-translateLeft 1.2s ease
+				&:nth-of-type(5)
+					animation: fade-translateLeft 1.5s ease
+				&:nth-of-type(6)
+					animation: fade-translateLeft 1.8s ease
+				&:nth-of-type(7)
+					animation: fade-translateLeft 2.1s ease
+				&:nth-of-type(8)
+					animation: fade-translateLeft 2.4s ease
+
 		&>li
 			color: #FFFFFF
 			background: $dark
@@ -565,6 +621,9 @@ button
 	.btn-accent
 		border-radius: 3px
 		margin-top: 15px
+		&.animate
+			.svg-c
+				animation: fade-translateRightTop 0.9s ease
 
 .create-site
 	margin-top: 45px
@@ -593,6 +652,30 @@ button
 			min-height: 133px
 			overflow: hidden
 			position: relative
+			height: 133px
+			&.right-i
+				padding: 21px
+				padding-right: 156px
+				&.no-p
+					padding-right: 20px
+			ul
+				list-style: none
+				padding: 0px
+				margin: 0px
+				width: 100%
+				li
+					position: relative
+					display: flex
+					font-size: 14px
+					line-height: 1.2
+					margin-bottom: 10px
+					&:last-child
+						margin-bottom: 0px
+					.svg-c
+						display: flex
+						align-items: center
+						justify-content: center
+						margin-right: 10px
 	.steps-ico
 		max-width: 123px
 		min-width: 123px
@@ -615,17 +698,107 @@ button
 			padding-left: 14px
 			position: relative
 			z-index: 1
+			margin-top: 10px
 		.svg-c
-			padding-left: 30px
 			position: relative
 			z-index: 1
+			margin-top: 15px
+			display: flex
+			justify-content: center
 	.h3
 		margin: 0px
 		font-size: 24px
 		font-weight: 900
 		text-align: center
-#my-footer
-	height: 500px
+		width: 100%
+	.owl-btn
+		background: $accent2
+		color: #FFFFFF
+		font-size: 14.4px
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		text-align: left
+		line-height: 0.97
+		position: absolute
+		right: -123px
+		width: 246px
+		height: 246px
+		border-radius: 1000px
+		padding-left: 17px
+		transition: all .3s ease
+		top: -56px
+		&:hover
+			width: 276px
+			height: 276px
+			top: -70px
+		.txt
+			margin-left: 15px
+.blue-bg
+	background: $accent2
+.questc-b
+	background: #e8e8e8
+	padding: 45px 0px
+	margin-top: 30px
+	&.animate
+		.container
+			animation: fade-translate 0.3s ease
+	.q-i
+		display: flex
+		align-items: center
+		padding-left: 95px
+		.h4
+			font-size: 16px
+			font-weight: 900
+			margin: 0px
+			width: 100%
+			max-width: 100%
+		.h3
+			font-size: 23px
+			font-weight: 900
+			margin: 0px
+			width: 100%
+			max-width: 100%
+		.svg-c
+			margin-right: 19px
+
+.blue-popup
+	position: relative
+	.container
+		background: $accent2
+		padding: 15px
+		padding-bottom: 45px
+	img
+		max-width: 100%
+	.h2
+		display: flex
+		align-items: center
+		color: #FFFFFF
+		margin-top: 33px
+		margin-bottom: 30px
+		.txt
+			margin-right: 15px
+	.content
+		background: $accent2
+		p
+			margin-bottom: 30px
+			text-align: left
+		*
+			color: #FFFFFF!important
+			font-size: 16px
+			font-weight: 100
+			line-height: 1.75 
+	.col-xs-16
+		text-align: left
+.btn-close-p
+	position: absolute
+	top: 0px
+	right: 0px
+	background: transparent
+	top: 15px
+	right: 15px
+
+
 
 /*Project end*/
 
